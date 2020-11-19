@@ -19,7 +19,6 @@ export default class NewItem extends React.Component {
   render() {
     return (
       <div>
-        {this.state.text}
         <input onChange={this.updateText} type="text" />
         <button>Add Item</button>
       </div>
