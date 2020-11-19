@@ -7,9 +7,9 @@ export default class Todo extends React.Component {
 
   render() {
     return (
-      <li>
+      <li className="list-group-item">
         {this.props.item}
-        <button onClick={() => {this.props.onDelete(this.props.todoId)}}>X</button>
+        <button className="badge" onClick={() => {this.props.onDelete(this.props.todoId)}}>X</button>
       </li>
     )
   }

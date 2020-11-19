@@ -36,9 +36,10 @@ export default class TodoApp extends React.Component {
   render() {
     return (
       <div>
-        <h3>Todo List</h3>
+        <h3 className="text-center">Todo List</h3>
         <NewItem addItem={this.addItem} />
-        <ul>
+        <br />
+        <ul className="list-group">
           {this.state.list.map((item, index) => {
             return <Todo todoId={index} onDelete={this.deleteItem} key={index} item={item} />
           })}

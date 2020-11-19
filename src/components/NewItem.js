@@ -25,9 +25,11 @@ export default class NewItem extends React.Component {
 
   render() {
     return (
-      <form>
-        <input value={ this.state.text } onChange={ this.updateText } type="text" />
-        <input type="submit" value="Add Item" onClick={this.handleSubmit} />
+      <form className="input-group">
+        <input className="form-control" value={ this.state.text } onChange={ this.updateText } type="text" />
+        <span className="input-group-button">
+          <input className="btn btn-default" type="submit" value="Add Item" onClick={this.handleSubmit} />
+        </span>
       </form>
     )
   }

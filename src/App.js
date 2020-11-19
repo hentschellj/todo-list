@@ -3,7 +3,9 @@ import './App.css';
 
 function App() {
   return (
-    <TodoApp />
+    <div className="container">
+      <TodoApp />
+    </div>
   );
 }
 
