@@ -19,6 +19,9 @@ export default class NewItem extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault()
+    if (this.state.text === '') {
+      return
+    }
     this.props.addItem(this.state.text)
     this.setState({ text: '' })
   }
