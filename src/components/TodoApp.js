@@ -12,7 +12,10 @@ export default class TodoApp extends React.Component {
         'Code Website'
       ]
     }
-    this.addItem = this.addItem.bind(this)
+  }
+
+  addItem(item) {
+    console.log(item)
   }
 
   render() {

@@ -20,7 +20,7 @@ export default class NewItem extends React.Component {
     return (
       <div>
         <input onChange={this.updateText} type="text" />
-        <button>Add Item</button>
+        <button onClick={() => {this.props.addItem(this.state.text)}}>Add Item</button>
       </div>
     )
   }
