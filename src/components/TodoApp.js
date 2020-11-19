@@ -20,10 +20,9 @@ export default class TodoApp extends React.Component {
         <NewItem />
         <ul>
           {this.state.list.map((item) => {
-            return <li>{item}</li>;
+            return <Todo item={item} />
           })}
         </ul>
-        <Todo />
       </div>
     )
   }
