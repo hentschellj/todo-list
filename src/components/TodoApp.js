@@ -13,11 +13,21 @@ export default class TodoApp extends React.Component {
       ]
     }
     this.addItem = this.addItem.bind(this)
+    this.deleteItem = this.deleteItem.bind(this)
   }
 
   addItem(item) {
     let newList = this.state.list
     newList.push(item)
+    this.setState({
+      list: newList
+    })
+  }
+
+  deleteItem(index) {
+    let newList = this.state.list
+    newList.splice(index, 1)
+
     this.setState({
       list: newList
     })
@@ -30,7 +40,7 @@ export default class TodoApp extends React.Component {
         <NewItem addItem={this.addItem} />
         <ul>
           {this.state.list.map((item, index) => {
-            return <Todo key={index} item={item} />
+            return <Todo todoId={index} onDelete={this.deleteItem} key={index} item={item} />
           })}
         </ul>
       </div>
